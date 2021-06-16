@@ -5,9 +5,9 @@ abstract class Party {
     }
 }
 
-public class Main extends Party {
-    public static void main(String[] args)
-    {
-        Party.doParty();
-    }
-}
+//public class Main extends Party {
+//    public static void main(String[] args)
+//    {
+//        Party.doParty();
+//    }
+//}

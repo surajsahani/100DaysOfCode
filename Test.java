@@ -1,7 +1,7 @@
-abstract public class Test {
+public class Test {
     public static void main(String[] args) {
         {
-            Test t = new Test() ;
+            Testab t = new Testab() ;
         }
     }
 }
