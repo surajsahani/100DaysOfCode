@@ -3,9 +3,17 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * @author suraj sahani
+ * @<code>your mum can write better code/code>
+ * @docRooot
+ * @deprecated
+ * @link
+ * */
+
 enum Suit {DIAMOND, CLUB, HEART, SPADE;}
 enum Rank {ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING;}
-public class Card {
+class Card {
     private Suit  suit;
     private Rank  rank;
 
@@ -27,7 +35,7 @@ class CardDeck {
         deck = new ArrayList<>();
         for (Suit suit: Suit.values()) {
             for (Rank rank : Rank.values()) {
-
+                deck.add(new Card(suit, rank));
             }
         }
     }

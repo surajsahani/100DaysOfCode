@@ -1,5 +1,8 @@
 import java.util.Random;
 import java.util.Scanner;
+enum HandSign {
+    SCISSOR, PAPER, STONE;
+}
 
 public class ScissorPaperStone {
     public static void main(String[] args) {
