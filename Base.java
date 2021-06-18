@@ -5,7 +5,7 @@ abstract class Base {
 class Derived extends Base {
 
 }
-class Main{
+class MainClass{
     public static void main(String[] args) {
         Derived d = new Derived();
         d.fun();
