@@ -1,12 +1,13 @@
 import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+
 
 class ExtractthePhoneNumber {
     public static void main(String[] args)throws IOException
     {
             BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
             int t = Integer.parseInt(in.readLine());
             while(t-- > 0) {
                 String text = in.readLine();
