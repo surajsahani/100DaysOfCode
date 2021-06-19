@@ -1,15 +1,12 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.*;
 
 class ExtractthePhoneNumber {
     public static void main(String[] args)throws IOException
     {
             BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-
             int t = Integer.parseInt(in.readLine());
             while(t-- > 0) {
                 String text = in.readLine();
@@ -25,19 +22,13 @@ class ExtractthePhoneNumber {
 class SolutionA{
     static List<Integer> sentenceWord(String text){
         // code here
-        String[] word=text.split(" ");
-        int i=0,count=0;
-        char[] sen=text.toCharArray();
-        while(i<sen.length-1){
-            if((sen[i]=='.' || sen[i]=='?' || sen[i]=='!') && sen[i+1]==' '){
-                count++;
-            }
-            i++;
-        }
-        count++;
-        List<Integer> result = new Stack<Integer>();
-        result.add(count);
-        result.add(word.length);
-        return result;
+
+        List<Integer> ans = new ArrayList<>();
+        String arr1[] = text.split("[!?.:]+");
+        String arr[] = text.split("\\s");
+
+        ans.add(arr1.length);
+        ans.add(arr.length);
+        return ans;
     }
     }
