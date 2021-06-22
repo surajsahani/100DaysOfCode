@@ -1,7 +1,6 @@
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.security.spec.ECField;
 
 public class DeserializationExample implements Serializable
 {
