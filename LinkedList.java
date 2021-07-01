@@ -9,7 +9,7 @@ class LinkedListImplementation {
         ll.add("B");
         ll.addLast("C");
         ll.addFirst("D");
-        ll.add(2,1);
+        ll.add("E");
 
         System.out.println(ll);
 
