@@ -41,25 +41,38 @@ class Complete
 {
     public static ArrayList<Integer> array(int a[][], int b[], int n)
     {
-        ArrayList<Integer> res = new ArrayList<>();
 
-        int leftDiagonal = 0;
-        for (int i=0; i<n; i++)
-        {
-            leftDiagonal +=a[i][i];
+        // just another method
+        ArrayList<Integer> ans = new ArrayList<>();
+
+        ans.add(0);
+        ans.add(0);
+        for(int i  = 0; i< n; i++) {
+            ans.set(1, Math.max(ans.get(1),b[i]));
+            ans.set(0, ans.get(0) + a[i][i]);
         }
 
-        int maxElement = b[0];
-        for(int i =1; i< n; i++)
-        {
-            if (b[i] > maxElement)
-            {
-                maxElement = b[i];
-            }
-        }
-        res.add(leftDiagonal);
-        res.add(maxElement);
-
-        return res;
+        return ans;
     }
+//        ArrayList<Integer> res = new ArrayList<>();
+//
+//        int leftDiagonal = 0;
+//        for (int i=0; i<n; i++)
+//        {
+//            leftDiagonal +=a[i][i];
+//        }
+//
+//        int maxElement = b[0];
+//        for(int i =1; i< n; i++)
+//        {
+//            if (b[i] > maxElement)
+//            {
+//                maxElement = b[i];
+//            }
+//        }
+//        res.add(leftDiagonal);
+//        res.add(maxElement);
+//
+//        return res;
+//    }
 }
