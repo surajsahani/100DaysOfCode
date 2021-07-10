@@ -1,4 +1,6 @@
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 /*Validate an IP Address
         Write a program to Validate an IPv4 Address. According to Wikipedia,
@@ -34,7 +36,7 @@ import java.util.Scanner;
         Constraints:
         1<=length of string <=50
 
-        Note:The Input/Ouput format and Example given are used for system's internal purpose, and should be
+        Note:The Input/Output format and Example given are used for system's internal purpose, and should be
         used by a user for Expected Output only. As it is a function problem, hence a user should not read any
          input from stdin/console. The task is to complete the function specified, and not to write the full code.
  */
@@ -60,10 +62,34 @@ public class POD10JUN {
 
 class SolutionIP {
 
+    public Set<String> allnums;
+
     public boolean isValid(String s){
-        if(!s.matches("(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\\\.){3}\n" +
-                "([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])"))
-                return false;
+
+        allnums = new HashSet<>();
+        // allowed segments
+        for (int i = 0; i < 256; i++) {
+            allnums.add(String.valueOf(i));
+        }
+
+        int dots = 0;
+        // counting dots
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '.') dots++;
+        }
+        if (dots != 3) return false;
+
+        // split according to positions of '.'
+        String[] nums = s.split("\\.");
+        if (nums.length != 4) return false;
+
+        for (String x : nums) {
+            if (!allnums.contains(x)) return false;
+        }
+
+//        if(!s.matches("(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\\\.){3}\n" +
+//                "([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])"))
+//                return false;
 
         return true;
     }
