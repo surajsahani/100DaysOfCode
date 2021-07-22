@@ -15,13 +15,24 @@ public class VowelOrNt {
     }
 }
 class VoweloRNotSolution {
-    static String isVowel(char c){
-        if(c == 'a' || c == 'e' || c == 'i' || c == 'o' ||c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' ||c == 'U' )
-        {
+    static String isVowel(char c) {
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
             return ("YES");
         } else {
             return ("NO");
         }
+
+        if (c == 'a' || c == 'A'
+                || c == 'e' || c == 'E'
+                || c == 'i' || c == 'I'
+                || c == 'o' || c == 'O'
+                || c == 'u' || c == 'U')
+
+            System.out.println("Yes");
+         else {
+            return "NO";
+        }
     }
 }
+
 
