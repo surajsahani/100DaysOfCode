@@ -22,16 +22,16 @@ class VoweloRNotSolution {
             return ("NO");
         }
 
-        if (c == 'a' || c == 'A'
-                || c == 'e' || c == 'E'
-                || c == 'i' || c == 'I'
-                || c == 'o' || c == 'O'
-                || c == 'u' || c == 'U')
-
-            System.out.println("Yes");
-         else {
-            return "NO";
-        }
+//        if (c == 'a' || c == 'A'
+//                || c == 'e' || c == 'E'
+//                || c == 'i' || c == 'I'
+//                || c == 'o' || c == 'O'
+//                || c == 'u' || c == 'U')
+//
+//            System.out.println("Yes");
+//         else {
+//            return "NO";
+//        }
     }
 }
 
