@@ -12,20 +12,20 @@ public class WordBreak {
             ArrayList<String> arr = new ArrayList<String>();
             for (int i = 0; i<n; i++)
             {
-                String p =sc.nextInt();
-                arr.add(p);
+       //         String p =sc.nextInt();
+      //          arr.add(p);
             }
             String line = sc.next();
-            Solution line = sc.next();
+      //      Solution line = sc.next();
             Solution obj = new Solution();
-            System.out.println(obj.wordBreak(line,arr));
+     //       System.out.println(obj.wordBreak(line,arr));
         }
     }
 }
 
 class SolutionBreak  {
-    public static int wordBreak(String A, ArrayList<String> B)
-    {
-
-    }
+//    public static int wordBreak(String A, ArrayList<String> B)
+//    {
+//
+//    }
 }

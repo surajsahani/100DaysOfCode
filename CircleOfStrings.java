@@ -43,22 +43,22 @@ class Graph {
     void DFSUtil(int v, Boolean visited[]) {
         visited[v] = true;
         int n;
-        Iterator<Integer> i = adj[v].iterator();
-        while(i.hasNext()) {
-            n = i.next();
-            if(!visited[n])
-                DFSUtil(n, visited);
-        }
+     //   Iterator<Integer> i = adj[v].iterator();
+//        while(i.hasNext()) {
+//            n = i.next();
+//            if(!visited[n])
+//                DFSUtil(n, visited);
+//        }
     }
 
     Graph getTranspose() {
         Graph g = new Graph(V);
         for (int v = 0; v < V; v++) {
-            Iterator<Integer> i = adj[v].listIterator();
-            while(i.hasNext()) {
-                g.adj[i.next()].add(v);
-                (g.in[v])++;
-            }
+//            Iterator<Integer> i = adj[v].listIterator();
+//            while(i.hasNext()) {
+//                g.adj[i.next()].add(v);
+//                (g.in[v])++;
+//            }
         }
         return g;
     }
